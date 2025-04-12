@@ -8,5 +8,5 @@ r.get("/F",cont.Feedback);
 r.get("/H",cont.Help);
 r.get("/FA",cont.Faqs);
 r.get("/PP",cont.PrivacyPolicy);
-
+r.post("/save",cont.save_data)
 module.exports = r;

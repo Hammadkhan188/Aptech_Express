@@ -56,12 +56,16 @@ let HealthInfo = async function () {
 
 let myapp = expr();
 
+myapp.use(expr.json())
+
 myapp.use("/ali/", ro);
 
+
+
 db().then(() => {
-    add_data();
-    PersonalRecords();
-    HealthInfo();
+    // add_data();
+    // PersonalRecords();
+    // HealthInfo();
     myapp.listen(process.env.PORT, () => {
         console.log(`Server Started At http://localhost:${process.env.PORT}`);
     });
